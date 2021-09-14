@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/contener"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_balloons"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/prog1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_gamer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contener" />
+
+
+    <ImageView
+        android:id="@+id/prog2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_programmer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prog1" />
+
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/prog1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prog1"
+        app:layout_constraintTop_toTopOf="@id/prog1" />
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/prog2"
+        app:layout_constraintEnd_toStartOf="@+id/prog2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/prog2" />
+
+
+    <LinearLayout
+        android:id="@+id/dotsC1"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/dots_back"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/prog1"
+        app:layout_constraintStart_toEndOf="@+id/prog1"
+        app:layout_constraintTop_toTopOf="@id/prog1">
+
+        <com.eyalbira.loadingdots.LoadingDots
+            android:id="@+id/dots1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:LoadingDots_auto_play="true"
+            app:LoadingDots_dots_color="@color/white"
+            app:LoadingDots_dots_count="4"
+            app:LoadingDots_dots_size="5dp"
+            app:LoadingDots_dots_space="3dp"
+            app:LoadingDots_jump_duration="200"
+            app:LoadingDots_jump_height="4dp"
+            app:LoadingDots_loop_duration="800"
+            app:LoadingDots_loop_start_delay="100" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/dotsC2"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dots_back"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/prog2"
+        app:layout_constraintEnd_toStartOf="@id/prog2"
+        app:layout_constraintTop_toTopOf="@id/prog2">
+
+        <com.eyalbira.loadingdots.LoadingDots
+            android:id="@+id/dots2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:LoadingDots_auto_play="true"
+            app:LoadingDots_dots_color="@color/white"
+            app:LoadingDots_dots_count="4"
+            app:LoadingDots_dots_size="5dp"
+            app:LoadingDots_dots_space="3dp"
+            app:LoadingDots_jump_duration="200"
+            app:LoadingDots_jump_height="4dp"
+            app:LoadingDots_loop_duration="800"
+            app:LoadingDots_loop_start_delay="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
